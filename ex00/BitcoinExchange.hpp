@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ecolin <ecolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 13:18:04 by elise             #+#    #+#             */
-/*   Updated: 2023/03/14 15:55:27 by elise            ###   ########.fr       */
+/*   Updated: 2023/03/17 16:54:27 by ecolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <fstream>
 #include <string>
 #include <map>
+#include <cstdlib>
+#include <ctime>
 
 class BadInput: public std::exception
 {

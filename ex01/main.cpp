@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ecolin <ecolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 17:25:10 by elise             #+#    #+#             */
-/*   Updated: 2023/03/15 17:51:44 by elise            ###   ########.fr       */
+/*   Updated: 2023/03/17 17:28:48 by ecolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ int main(int argc, char *argv[])
     }
     std::string s = argv[1];
     size_t  pos = s.find_first_not_of(' ');
-    std::vector<int> num;
+    std::vector<int> tab;
+	std::ve
     pos = s.find_first_not_of(' ');
     while (pos != s.npos)
     {
@@ -34,12 +35,14 @@ int main(int argc, char *argv[])
                 std::cout << "Bad Input.\n";
                 exit(EXIT_FAILURE);
             }
-            num.push_back(s[pos]);
+            tab.push_back(Arg(std::atoi(&s[pos])));
         }
         else
         {
             if (s[pos] == '*' || s[pos] == '/' || s[pos] == '+' || s[pos] == '-')
-                num.push_back(s[pos]);
+            {
+				
+			}
             else
             {
                 std::cout << "Bad Input.\n";
@@ -48,13 +51,5 @@ int main(int argc, char *argv[])
         }
         s = &s[pos + 1];
         pos = s.find_first_not_of(' ');
-    }
-    std::vector<int>::iterator it = num.begin();
-    int tmp = 0;
-    int res = 0;
-    while(it != num.end())
-    {
-        
-        it++;
     }
 }
