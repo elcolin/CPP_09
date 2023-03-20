@@ -3,14 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecolin <ecolin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 17:25:10 by elise             #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2023/03/18 18:34:37 by elise            ###   ########.fr       */
-=======
-/*   Updated: 2023/03/17 17:28:48 by ecolin           ###   ########.fr       */
->>>>>>> e29fa65f1e2eff51dc44fc566632c1eb6af85e86
+/*   Updated: 2023/03/20 10:29:12 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +46,6 @@ int main(int argc, char *argv[])
         std::cout << "Bad Input.\n";
         exit(EXIT_FAILURE);
     }
-<<<<<<< HEAD
     int i = 1;
     std::list<int> tab;
     tab.push_back(argv[1][0]);
@@ -86,37 +81,4 @@ int main(int argc, char *argv[])
         it++;
     }
     std::cout << *tab.begin() - '0';
-=======
-    std::string s = argv[1];
-    size_t  pos = s.find_first_not_of(' ');
-    std::vector<int> tab;
-	std::ve
-    pos = s.find_first_not_of(' ');
-    while (pos != s.npos)
-    {
-        if (isdigit(s[pos]))
-        {
-            if (std::atoi(&s[pos]) > 10)
-            {
-                std::cout << "Bad Input.\n";
-                exit(EXIT_FAILURE);
-            }
-            tab.push_back(Arg(std::atoi(&s[pos])));
-        }
-        else
-        {
-            if (s[pos] == '*' || s[pos] == '/' || s[pos] == '+' || s[pos] == '-')
-            {
-				
-			}
-            else
-            {
-                std::cout << "Bad Input.\n";
-                exit(EXIT_FAILURE);
-            }
-        }
-        s = &s[pos + 1];
-        pos = s.find_first_not_of(' ');
-    }
->>>>>>> e29fa65f1e2eff51dc44fc566632c1eb6af85e86
 }
