@@ -6,13 +6,13 @@
 #    By: elise <elise@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/14 17:11:53 by elise             #+#    #+#              #
-#    Updated: 2023/03/14 17:29:43 by elise            ###   ########.fr        #
+#    Updated: 2023/03/18 17:53:17 by elise            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 
-CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
+CXXFLAGS = -g3 -fsanitize=address -std=c++98 -Wall -Wextra -Werror
 
 NAME = RPN
 
