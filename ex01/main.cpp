@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecolin <ecolin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 17:25:10 by elise             #+#    #+#             */
-/*   Updated: 2023/03/20 17:04:29 by ecolin           ###   ########.fr       */
+/*   Updated: 2023/03/21 17:56:57 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RPN.hpp"
-
-//faire des exceptions
 
 int do_op(int a, int b, char op)
 {
@@ -84,7 +82,6 @@ int main(int argc, char *argv[])
     }
 	errorin(num != op, "Wrong quantity of numbers and signs.");
     std::list<int>::iterator it = tab.begin();
-    std::list<int>::iterator tmp = tab.begin();
     std::list <int>::iterator r = tab.begin();
     while (it != tab.end())
     {
@@ -94,9 +91,10 @@ int main(int argc, char *argv[])
             *it = do_op(*it++ - '0', *it++ - '0', *it) + '0';
             r = it;
             it--;
-            tmp = it--;
             tab.erase(it);
-            tab.erase(tmp);
+            it = r;
+            it--;
+            tab.erase(it);
             it = tab.begin();
         }
         it++;
