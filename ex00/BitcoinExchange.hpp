@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecolin <ecolin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 13:18:04 by elise             #+#    #+#             */
-/*   Updated: 2023/03/17 16:54:27 by ecolin           ###   ########.fr       */
+/*   Updated: 2023/04/16 16:53:32 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,6 @@ class TooHighNum: public std::exception
         return ("Number too high");
     }
 };
+
+int checkdate(std::string s);
+int create_data(std::ifstream &file, std::map <std::string, float> &data);
