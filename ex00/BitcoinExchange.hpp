@@ -3,13 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ecolin <ecolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 13:18:04 by elise             #+#    #+#             */
-/*   Updated: 2023/04/16 16:53:32 by elise            ###   ########.fr       */
+/*   Updated: 2023/04/17 15:58:16 by ecolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef BITCOINEXCHANGE_HPP
+#define BITCOINEXCHANGE_HPP
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -43,3 +45,5 @@ class TooHighNum: public std::exception
 
 int checkdate(std::string s);
 int create_data(std::ifstream &file, std::map <std::string, float> &data);
+
+#endif

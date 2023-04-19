@@ -3,54 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ecolin <ecolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 17:25:10 by elise             #+#    #+#             */
-/*   Updated: 2023/03/21 17:56:57 by elise            ###   ########.fr       */
+/*   Updated: 2023/04/17 16:07:29 by ecolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RPN.hpp"
-
-int do_op(int a, int b, char op)
-{
-    if (op == '*')
-        return a * b;
-    else if (op == '-')
-        return a - b;
-    else if (op == '/')
-        return a / b;
-    else if (op == '+')
-        return a + b;
-    std::cout << "WHAT?\n";
-    exit(EXIT_FAILURE);
-}
-
-void print(std::list<int> &tab)
-{
-    std::list<int>::iterator it = tab.begin();
-    while (it != tab.end())
-    {
-        std::cout << *it - '0' << " ";
-        it++;
-    }
-    std::cout << "\n";
-}
-
-void errorin(int con, const char *err_msg)
-{
-	if (con)
-	{
-		std::cout << err_msg << std::endl;
-		exit(EXIT_FAILURE);
-	}
-}
-
-void	skip_space(char *str, int *i)
-{
-	while (str[*i] && str[*i] == ' ')
-		(*i)++;
-}
 
 int main(int argc, char *argv[])
 {
@@ -62,7 +22,7 @@ int main(int argc, char *argv[])
 	skip_space(argv[1], &i);
 	errorin(!isdigit(argv[1][i]), "Input has a non-digit character.");
     tab.push_back(argv[1][i++]);
-	errorin(argv[1][i] != ' ', "Wrong Input");
+	errorin(argv[1][i] && argv[1][i] != ' ', "Wrong Input");
     while (argv[1][i])
     {
 		skip_space(argv[1], &i);

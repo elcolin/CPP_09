@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ecolin <ecolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 13:17:36 by elise             #+#    #+#             */
-/*   Updated: 2023/04/16 16:54:21 by elise            ###   ########.fr       */
+/*   Updated: 2023/04/17 15:55:55 by ecolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ int main(int argc, char *argv[])
             if (pos == tmp.npos || !checkdate(tmp.substr(0, pos)))
                 throw(BadInput());
             bc = atof(tmp.substr(pos + 3).c_str());
-            if (bc > 100)
+            if (bc >= 1000)
                 throw(TooHighNum());
-            else if (bc < 0)
+            else if (bc <= 0)
                 throw(NegNum());
             it = data.upper_bound(tmp.substr(0, pos));
             if (it == data.begin() && data.find(tmp.substr(0, pos)) == data.end())
